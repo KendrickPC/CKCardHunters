@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className='py-5'>
       <Container>
         <h1>CK CARD HUNTERS</h1>
       </Container>
