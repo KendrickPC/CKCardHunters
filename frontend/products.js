@@ -27,7 +27,7 @@ const products = [
   },
   {
     _id: '3',
-    name: 'Cannon EOS 80D DSLR Camera',
+    name: 'Canon EOS 80D DSLR Camera',
     image: '/images/camera.jpg',
     description:
       'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
