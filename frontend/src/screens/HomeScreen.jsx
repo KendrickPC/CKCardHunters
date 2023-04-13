@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap'
 import Product from '../components/Product'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
-// axios.get(`${API_BASE_URL}/api/products/1234`)
+
 
 
 const HomeScreen = () => {
