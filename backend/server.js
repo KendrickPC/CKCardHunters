@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
+const dotenv = require('dotenv')
 const products = require('./data/products')
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -16,4 +19,6 @@ app.get('/api/products/:id', (req, res) => {
   res.json(product)
 })
 
-app.listen(8080, console.log("Server listening on PORT 8080"))
+const PORT = process.env.PORT || 3001
+
+app.listen(PORT, console.log(`Server ${process.env.NODE_ENV} mode listeningggg on PORT ${PORT}`))

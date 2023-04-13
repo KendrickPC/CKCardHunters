@@ -27,6 +27,7 @@ dist-ssr
 
 # My personal files
 .env
+.env.local
 links.txt
 DEVNOTES.md
 
