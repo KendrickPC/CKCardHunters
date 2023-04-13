@@ -1,9 +1,13 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv')
-const products = require('./data/products')
+
+import connectDB from './config/database.js';
+import express from 'express';
+import cors from 'cors'
+import colors from 'colors'
+import dotenv from 'dotenv';
+import products from './data/products.js'
 
 dotenv.config();
+connectDB();
 
 const app = express();
 app.use(cors());
@@ -21,4 +25,4 @@ app.get('/api/products/:id', (req, res) => {
 
 const PORT = process.env.PORT || 3001
 
-app.listen(PORT, console.log(`Server ${process.env.NODE_ENV} mode listeningggg on PORT ${PORT}`))
+app.listen(PORT, console.log(`Server ${process.env.NODE_ENV} mode listeningggg on PORT ${PORT}`.yellow.bold))
