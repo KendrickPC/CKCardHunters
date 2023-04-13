@@ -17,7 +17,6 @@ const ProductScreen = () => {
     const fetchProduct = async () => {
       // destructuring res.data
       const { data } = await axios.get(`${API_BASE_URL}/api/products/${id}`)
-      console.log("HERE")
       setProduct(data);
     }
     fetchProduct();
