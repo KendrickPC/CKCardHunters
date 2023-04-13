@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const products = require('./data/products')
 
 const app = express();
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('API is up and running...')
@@ -14,7 +16,4 @@ app.get('/api/products/:id', (req, res) => {
   res.json(product)
 })
 
-app.listen(3000, console.log("Server listening on PORT 3000"))
-
-
-// Stoppage: 5:40
+app.listen(8080, console.log("Server listening on PORT 8080"))

@@ -1,9 +1,29 @@
-import React from 'react'
-import products from '../products'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 import { Col, Row } from 'react-bootstrap'
 import Product from '../components/Product'
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+// axios.get(`${API_BASE_URL}/api/products/1234`)
+
+
 const HomeScreen = () => {
+  const [products, setProducts] = useState([])
+
+  // Making a req to our backend.
+  useEffect( () => {
+    const fetchProducts = async () => {
+      // destructuring res.data
+      const { data } = await axios.get(`${API_BASE_URL}/api/products/`)
+      console.log("HERE")
+      setProducts(data);
+    }
+    fetchProducts();
+  }, [])
+
+
+
+  
   return (
     <>
       <h1>Latest Products</h1>
