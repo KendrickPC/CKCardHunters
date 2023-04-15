@@ -12,7 +12,7 @@ const reducer = combineReducers({
   cart: cartReducer
 })
 
-const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : ['blehbleh blhe'];
+const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
 
 const initialState = {
   cart: {cartItems: cartItemsFromStorage}

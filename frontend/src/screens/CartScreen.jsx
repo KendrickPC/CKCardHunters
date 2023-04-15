@@ -19,10 +19,24 @@ const CartScreen = () => {
 
   const cart = useSelector(state => state.cart)
   const {cartItems} = cart;
-  // console.log(cartItems);
+
+  console.log('cartItems.length', cartItems.length);
 
   return (
-    <div>CartScreen</div>
+    <Row>
+      <Col md={8}>
+        <h1>Shopping Cart</h1>
+        {cartItems.length === 0 ? <Message>You break you buy! <Link to='/'>Go Back</Link></Message> : (
+          <ListGroup variant='flush'>
+
+          </ListGroup>
+        )}
+      </Col>
+      <Col md={2}>
+      </Col>
+      <Col md={2}>
+      </Col>
+    </Row>
   )
 }
 
