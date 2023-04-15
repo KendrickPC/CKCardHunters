@@ -12,7 +12,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 
 const ProductScreen = () => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const navigate = useNavigate()
   const {id} = useParams();
   const dispatch = useDispatch();
@@ -24,13 +24,9 @@ const ProductScreen = () => {
     dispatch(listProductDetails(id))
   }, [dispatch])
 
-  console.log("HISTORY:", history);
-
   const addToCartHandler = () => {
     navigate(`/cart/${id}?qty=${qty}`)
-    // history.push(`/cart/${id}?qty=${qty}`)
   }
-
 
   return (
     <>
@@ -89,7 +85,6 @@ const ProductScreen = () => {
                   <Col>Qty</Col>
                   <Col>
                     <Form.Select
-                      as="select"
                       value={qty} 
                       onChange={(e) => setQty(e.target.value)}
                       // required
@@ -121,7 +116,6 @@ const ProductScreen = () => {
       </Col>
     </Row>
     )}
-
     </>
   )
 };
