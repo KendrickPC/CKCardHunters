@@ -90,9 +90,9 @@ const ProductScreen = () => {
                       // required
                     >
                     {/* console.log(`product.countInStock:::`, [...Array(product.countInStock).keys()]) */}
-                      {[...Array(product.countInStock).keys()].map(x => (
-                        <option key={x + 1} value={x + 1}>
-                          {x + 1}
+                      {[...Array(product.countInStock).keys()].map(count => (
+                        <option key={count + 1} value={count + 1}>
+                          {count + 1}
                         </option>
                       ))}
                     </Form.Select>
