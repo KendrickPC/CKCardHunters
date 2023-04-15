@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
-import axios from 'axios';
 import { Col, Row } from 'react-bootstrap'
 import Product from '../components/Product'
 import {listProducts} from '../actions/productActions.js'
@@ -37,8 +36,5 @@ const HomeScreen = () => {
     </>
   )
 }
-
-
-
 
 export default HomeScreen
