@@ -5,8 +5,8 @@
 - [x] Qty Select & Add to Cart Button
 - [x] Cart Reducer & Add to Cart Action
 - [x] Add to Cart Functionality
-- [x] Cart Screen
-- [x] Remove Items From Cart
+- [] Cart Screen
+- [] Remove Items From Cart
 
 ### REDUX FLOW
 
