@@ -20,7 +20,7 @@
 ### Back End User Authentication
 
 - [x] Clean up with `controllers`
-- [] User Auth `endpoint`
+- [x] User Auth `endpoint`
 - [] Generate JWT JSON Web Token
 - [] Custom Auth Middleware
 - [] Token saving in Postman testing
