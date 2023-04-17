@@ -30,8 +30,18 @@ const authUser = asyncHandler(async (req, res) => {
 // @route GET /api/users/profile
 // @access PRIVATE
 const getUserProfile = asyncHandler(async (req, res) => {
-  res.send("TESTING getUSerProfile success from controllers!!")
-
+  const user = await User.findById(req.user._id)
+  if (user) {
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+    })
+  } else {
+    res.status(404)
+    throw new Error('User not found')
+  }
 })
 
 export {
