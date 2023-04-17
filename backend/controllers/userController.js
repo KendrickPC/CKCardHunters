@@ -26,6 +26,15 @@ const authUser = asyncHandler(async (req, res) => {
   }
 })
 
+// @desc GET user profile
+// @route GET /api/users/profile
+// @access PRIVATE
+const getUserProfile = asyncHandler(async (req, res) => {
+  res.send("TESTING getUSerProfile success from controllers!!")
+
+})
+
 export {
-  authUser
+  authUser,
+  getUserProfile
 }

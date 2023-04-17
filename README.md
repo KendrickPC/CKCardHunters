@@ -21,7 +21,7 @@
 
 - [x] Clean up with `controllers`
 - [x] User Auth `endpoint`
-- [] Generate JWT JSON Web Token
+- [x] Generate JWT JSON Web Token
 - [] Custom Auth Middleware
 - [] Token saving in Postman testing
 - [] User Registration and Password Encryption
