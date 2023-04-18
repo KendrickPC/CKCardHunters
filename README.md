@@ -24,7 +24,7 @@
 - [x] Generate JWT JSON Web Token
 - [x] Custom Auth Middleware
 - [x] Token saving in Postman testing
-- [] User Registration and Password Encryption
+- [x] User Registration and Password Encryption
 
 ### Front End User Auth with Profile
 
