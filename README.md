@@ -29,8 +29,8 @@
 ### Front End User Auth with Profile
 
 - [x] User Login Reducer and Action
-- [] User Login Screen and Functionality
-- [] Show User in Navbar and Logout
+- [x] User Login Screen and Functionality
+- [x] Show User in Navbar and Logout
 - [] User Register Reducer, Action and Screen (pages)
 - [] Update Profile Endpoint
 - [] Profile Screen and Get User Details
