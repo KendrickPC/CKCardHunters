@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {Link, useParams} from 'react-router-dom'
+import {Link, useParams, useNavigate} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {Row, Col, ListGroup, Image, Form, Button, Card} from 'react-bootstrap'
 import Message from '../components/Message'
@@ -9,8 +9,14 @@ const CartScreen = () => {
   const {id} = useParams()
   const queryParams = new URLSearchParams(window.location.search);
   const qty = Number(queryParams.get('qty'));
-
+  const navigate = useNavigate()
   const dispatch = useDispatch()
+
+  // Check for state properties to see if there's something more secure. 
+  const isAuthenticated = useSelector((state) => state.userLogin.userInfo);
+  console.log("whatIsThis??", isAuthenticated);
+
+
   useEffect( () => {
     if (id) {
       dispatch(addToCart(id, qty))
@@ -25,8 +31,14 @@ const CartScreen = () => {
   }
 
   const checkoutHandler = () => {
-    console.log(`checkoutHandler called`);
-  }
+    if (isAuthenticated === undefined) {
+      navigate("/login");
+    } else {
+      navigate("/shipping");
+    }
+  };
+
+
 
   return (
     <Row>
