@@ -14,9 +14,7 @@ const CartScreen = () => {
 
   // Check for state properties to see if there's something more secure. 
   const isAuthenticated = useSelector((state) => state.userLogin.userInfo);
-  console.log("whatIsThis??", isAuthenticated);
-
-
+  
   useEffect( () => {
     if (id) {
       dispatch(addToCart(id, qty))
@@ -31,9 +29,9 @@ const CartScreen = () => {
   }
 
   const checkoutHandler = () => {
-    if (isAuthenticated === undefined) {
+    if (!isAuthenticated) {
       navigate("/login");
-    } else {
+    } else if(isAuthenticated){
       navigate("/shipping");
     }
   };

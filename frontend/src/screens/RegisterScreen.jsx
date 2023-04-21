@@ -51,7 +51,7 @@ const RegisterScreen = () => {
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         {/* name */}
-      <Form.Group controlId="name">
+        <Form.Group controlId="name">
           <Form.Label>Your name</Form.Label>
           <Form.Control
             type="name"

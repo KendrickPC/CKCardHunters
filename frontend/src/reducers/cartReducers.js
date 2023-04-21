@@ -1,10 +1,11 @@
 import {
   CART_ADD_ITEM, 
-  CART_REMOVE_ITEM
+  CART_REMOVE_ITEM,
+  CART_SAVE_SHIPPING_ADDRESS
 } from '../constants/cartConstants'
 
 // reducer function for the Redux store's cart state.
-export const cartReducer = (state={cartItems: []}, action) => {
+export const cartReducer = (state={cartItems: [], shippingAddress: {}}, action) => {
   switch(action.type) {
     case CART_ADD_ITEM:
       // creates a new item object using the payload property of the action object
@@ -32,6 +33,11 @@ export const cartReducer = (state={cartItems: []}, action) => {
       return {
         ...state,
         cartItems: state.cartItems.filter(item => item.product !== action.payload)
+      }
+    case CART_SAVE_SHIPPING_ADDRESS:
+      return {
+        ...state,
+        shippingAddress: action.payload,
       }
     default:
       return state

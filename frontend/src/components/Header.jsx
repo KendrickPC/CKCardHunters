@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap'
 import {logout} from '../actions/userActions'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
 
@@ -10,10 +11,13 @@ const Header = () => {
 
   const userLogin = useSelector(state => state.userLogin)
   const {userInfo} = userLogin
+  const navigateTo = useNavigate()
 
   const logoutHandler = () => {
     // console.log("logout!!!")
     dispatch(logout())
+    // Quick fix to navigate back to home page
+    navigateTo('')
   }
 
   return (

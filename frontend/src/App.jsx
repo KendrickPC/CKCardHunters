@@ -10,6 +10,7 @@ import CartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import ProfileScreen from './screens/ProfileScreen'
+import ShippingScreen from './screens/ShippingScreen'
 
 function App() {
 
@@ -19,13 +20,13 @@ function App() {
       <main className='py-5'>
       <Container>
         <Routes>
-          <Route path='/' element={<HomeScreen/>} exact />
+          <Route path='/shipping' element={<ShippingScreen/>}/>
           <Route path='/login' element={<LoginScreen/>}/>
           <Route path='/register' element={<RegisterScreen/>}/>
           <Route path='/profile' element={<ProfileScreen/>}/>
           <Route path='/product/:id' element={<ProductScreen/>} />
-          {/* Optional id for route */}
           <Route path='/cart/:id?' element={<CartScreen/>} />
+          <Route path='/' element={<HomeScreen/>} exact />
         </Routes>
       </Container>
       </main>
