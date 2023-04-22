@@ -28,7 +28,7 @@ const PaymentScreen = () => {
     // console.log('submit handler clicked!')
     dispatch(savePaymentMethod(paymentMethod))
     navigateTo('/placeorder')
-  }
+  } 
 
   return (
     <FormContainer>
@@ -36,7 +36,7 @@ const PaymentScreen = () => {
       <h1>Payment Method</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label as='legend'>Select Method</Form.Label> 
+          <Form.Label as="legend">Select Method</Form.Label> 
           <Col>
           <Row>
             <Form.Check 
